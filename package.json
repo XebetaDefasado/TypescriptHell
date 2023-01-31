@@ -1,0 +1,15 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Nodejs testing",
+  "main": "script.ts",
+  "scripts": {
+    "start": "node HTML/JS/script.js",
+    "test": "node HTML/JS/script.js"
+  },
+  "dependencies": {
+    "typescript": "^4.9.5"
+  },
+  "author": "Xebeta",
+  "license": "ISC"
+}
