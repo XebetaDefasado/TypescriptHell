@@ -1,4 +1,4 @@
 node_modules/
 .md !README.md
 *.d.ts
-script.js.map
+/JS/script.js.map
