@@ -4,8 +4,8 @@
   "description": "Nodejs testing",
   "main": "script.ts",
   "scripts": {
-    "start": "node HTML/JS/script.js",
-    "test": "node HTML/JS/script.js"
+    "start": "node HTML/Home/JS/script.js",
+    "test": "node HTML/Home/JS/script.js"
   },
   "dependencies": {
     "typescript": "^4.9.5"

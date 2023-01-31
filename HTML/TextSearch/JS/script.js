@@ -1,2 +1,2 @@
-let message = "YES MF";
+console.log("textSearch");
 //# sourceMappingURL=script.js.map
