@@ -7,6 +7,8 @@ body {
   max-height: 100vh;
   width: 100vw;
   max-width: 100vw;
+  background-color: #f0f0f0;
+  overflow: hidden;
 }
 .nav-bar {
   transition: none;
@@ -25,6 +27,11 @@ body {
   height: calc(64px - 2px);
   border: 1px solid whitesmoke;
   background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 36%;
+  border-top-left-radius: 36%;
 }
 .nav-item:hover {
   background-color: #505050;
@@ -40,9 +47,135 @@ body {
   bottom: calc(100% - 100vh);
   left: calc(10vw - 1px);
   display: grid;
+  align-items: center;
 }
 
-@media screen and (max-height: 310px) {
+.page-img {
+  width: 40px;
+  height: 40px;
+}
+.form {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: calc(100vw - 10vw - 1px);
+  height: calc(100vh - 2px);
+}
+
+#textEditor {
+  position: relative;
+  padding: 5px;
+  overflow: scroll;
+  height: calc(60% - 10px - 2 * 5px);
+  width: calc(75% - 10px - 2 * 5px);
+  border: 5px solid #505050;
+  outline: none;
+  z-index: 1;
+}
+
+#textEditor::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0;
+  background-color: black;
+}
+#textEditor::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+#modifyText {
+  max-width: 13.125em;
+  max-height: 13.125em;
+  transition: transform 1s ease;
+  cursor: pointer;
+  width: calc(10vw);
+  height: 10vh;
+  border: 1px solid green;
+  background: lightgreen;
+}
+#modifyText:hover {
+  transform: rotate(90deg);
+}
+#modifyText:hover > .textFmod {
+  transform: rotate(-90deg);
+}
+
+#modifyAndOptions {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 240px;
+}
+
+#modifyDiv {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 240px;
+}
+#modifyText label {
+  transition: transform 1s ease;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-45deg);
+  color: darkgreen;
+  max-width: 240px;
+}
+
+#optionsDiv {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  max-width: 240px;
+}
+
+#optionsList {
+  position: relative;
+  display: grid;
+  row-gap: 5px;
+  column-gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  max-width: 240px;
+  bottom: 25%;
+}
+#optionsList li {
+  border: 1px solid #555;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 110px;
+  max-height: 3em;
+}
+#optionsList li label {
+  padding: 0px 0px 0px 5px;
+  height: fit-content;
+}
+
+.checkmark {
+  cursor: pointer;
+  border: 1px solid black;
+  height: fit-content;
+  border-radius: 25%;
+}
+
+#submitText {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
   .nav-bar {
     transition: none;
     position: absolute;

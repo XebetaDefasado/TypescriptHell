@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text Searching</title>
+  <link rel="stylesheet" href="./TextSearch/CSS/style.css" />
+  <script src="./TextSearch/JS/script.js" defer></script>
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <a href="./home.html" class="nav-item" id="Home_Page">
+      <img src="./Images/home.png" class="page-img">
+    </a>
+    <a href="./textModification.html" class="nav-item" id="Text_Modification_Page">
+      <img src="./Images/history.png" class="page-img">
+    </a>
+    <a href="./textCollection.html" class="nav-item" id="Text_Collection_Page">
+      <img src="./Images/search.png" class="page-img">
+    </a>
+  </nav>
+  <main class="main-content">
+    <form class="form">
+      <textarea id="textEditor" class="" spellcheck="false" required></textarea>
+      <div id="modifyAndOptions">
+        <div id="modifyDiv">
+          <button type="button" id="modifyText">
+            <label for="modifyText" class="textFmod">Modify Text</label>
+          </button>
+        </div>
+        <div id="optionsDiv">
+          <ul id="optionsList">
+            <li>
+              <span class="checkmark"></span>
+              <label for=".checkmark">Clear Text</label>
+            </li>
+            <li>
+              <span class="checkmark"></span>
+              <label for=".checkmark">Lowercase Words</label>
+            </li>
+            <li>
+              <span class="checkmark"></span>
+              <label for=".checkmark">Show Results</label>
+            </li>
+            <li>
+              <span class="checkmark"></span>
+              <label for=".checkmark">Switch Textboxes</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="submit" id="submitText"></button>
+    </form>
+  </main>
+</body>
+
+</html>

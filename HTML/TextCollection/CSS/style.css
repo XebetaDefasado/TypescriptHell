@@ -8,6 +8,7 @@ body {
   width: 100vw;
   max-width: 100vw;
   background-color: #f0f0f0;
+  overflow: hidden;
 }
 .nav-bar {
   transition: none;
@@ -39,7 +40,6 @@ body {
   border-color: #afafaf;
   transform: rotate(360deg);
   border-radius: 25%;
-  box-shadow: 0px 0px 5px #505050;
 }
 .main-content {
   position: absolute;
@@ -52,55 +52,7 @@ body {
   justify-items: center;
   align-items: center;
 }
-.article {
-  padding: 5px;
-  position: absolute;
-  width: calc(50vw - 12px);
-  height: calc(100vh - 12px);
-  border: 1px solid black;
-  font-family: monospace;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
-  color: #505050;
-  overflow-y: scroll;
-}
-.article::-webkit-scrollbar {
-  width: 0.5vw;
-  height: 0;
-  background-color: #303030;
-}
-.article::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 10px;
-}
-.article h1 {
-  text-decoration: overline;
-}
-.article ul {
-  height: 120px;
-}
-.article .textContent {
-  font-weight: 700;
-}
-.article li {
-  list-style-type: lower-greek;
-  height: fit-content;
-  width: 500px;
-  max-width: 500px;
-}
-.article li strong {
-  text-decoration: underline;
-}
-.article a {
-  color: #000000;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.stalked {
-  box-shadow: 0px 0px 5px #f0f0f0;
-}
+
 .page-img {
   transition: 1s;
   width: calc(calc(10vw - 2px) * 0.25);
@@ -132,9 +84,5 @@ body {
     width: calc(100vw - 2px);
     bottom: calc(35vh - 1px);
     left: 0;
-  }
-  .article {
-    width: 50vw;
-    height: 50vh;
   }
 }
